@@ -1,0 +1,398 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Book Your Stay | Nina Hotels</title>
+  <meta name="description" content="Book your room at Nina Hotels Abuja. Choose from Classic, Deluxe, Junior Suite, Executive or Presidential Suite and confirm via WhatsApp.">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+  <link rel="stylesheet" href="assets/css/style.css">
+  <link rel="stylesheet" href="assets/css/booking.css">
+</head>
+<body>
+
+  <!-- Navigation -->
+  <nav class="navbar scrolled" id="navbar">
+    <div class="nav-container">
+      <a href="index.html" class="logo">
+        <img src="image/logo2.png" alt="Nina Hotels Logo">
+        <span>Nina Hotels</span>
+      </a>
+      <ul class="nav-links" id="navLinks">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="facility.html">Facilities</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="contact.html">Contact</a></li>
+        <li><a href="booking.html" class="nav-book-btn">Book Now</a></li>
+      </ul>
+      <button class="hamburger" id="hamburger" aria-label="Toggle menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </nav>
+
+  <div class="booking-page">
+
+    <!-- Page Header -->
+    <div class="page-header" data-aos="fade-down">
+      <p class="section-subtitle">Reserve Your Room</p>
+      <h1>Book Your Stay</h1>
+      <p>Fill in your details and confirm your booking instantly via WhatsApp</p>
+    </div>
+
+    <div class="container">
+      <div class="booking-layout">
+
+        <!-- Main Form -->
+        <form class="booking-form-card" id="bookingForm" novalidate>
+
+          <!-- Step 1: Stay Details -->
+          <div class="form-section">
+            <div class="form-section-title">
+              <span class="step-num">1</span>
+              <h3>Stay Details</h3>
+            </div>
+            <div class="form-grid cols-3">
+              <div class="form-group">
+                <label>Check-In Date <span class="req">*</span></label>
+                <div class="input-box">
+                  <i class="fas fa-calendar-check"></i>
+                  <input type="date" id="checkIn" name="checkIn" required>
+                </div>
+              </div>
+              <div class="form-group">
+                <label>Check-Out Date <span class="req">*</span></label>
+                <div class="input-box">
+                  <i class="fas fa-calendar-times"></i>
+                  <input type="date" id="checkOut" name="checkOut" required>
+                </div>
+              </div>
+              <div class="form-group">
+                <label>Number of Rooms</label>
+                <div class="input-box">
+                  <i class="fas fa-door-open"></i>
+                  <select id="rooms" name="rooms">
+                    <option value="1">1 Room</option>
+                    <option value="2">2 Rooms</option>
+                    <option value="3">3 Rooms</option>
+                    <option value="4">4 Rooms</option>
+                  </select>
+                </div>
+              </div>
+            </div>
+            <div class="form-grid cols-3" style="margin-top:18px;">
+              <div class="form-group">
+                <label>Adults</label>
+                <div class="input-box">
+                  <i class="fas fa-user"></i>
+                  <select id="adults" name="adults">
+                    <option value="1">1 Adult</option>
+                    <option value="2" selected>2 Adults</option>
+                    <option value="3">3 Adults</option>
+                    <option value="4">4 Adults</option>
+                    <option value="5">5+ Adults</option>
+                  </select>
+                </div>
+              </div>
+              <div class="form-group">
+                <label>Children</label>
+                <div class="input-box">
+                  <i class="fas fa-child"></i>
+                  <select id="children" name="children">
+                    <option value="0" selected>0 Children</option>
+                    <option value="1">1 Child</option>
+                    <option value="2">2 Children</option>
+                    <option value="3">3 Children</option>
+                  </select>
+                </div>
+              </div>
+              <div class="form-group">
+                <label>Notes / Destination</label>
+                <div class="input-box">
+                  <i class="fas fa-map-marker-alt"></i>
+                  <input type="text" id="destination" name="destination" placeholder="e.g. Kubwa, Abuja">
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Step 2: Guest Information -->
+          <div class="form-section">
+            <div class="form-section-title">
+              <span class="step-num">2</span>
+              <h3>Guest Information</h3>
+            </div>
+            <div class="form-grid cols-2">
+              <div class="form-group">
+                <label>Full Name <span class="req">*</span></label>
+                <div class="input-box">
+                  <i class="fas fa-user"></i>
+                  <input type="text" id="fullName" name="fullName" placeholder="Your full name" required>
+                </div>
+              </div>
+              <div class="form-group">
+                <label>Email Address <span class="req">*</span></label>
+                <div class="input-box">
+                  <i class="fas fa-envelope"></i>
+                  <input type="email" id="email" name="email" placeholder="you@example.com" required>
+                </div>
+              </div>
+              <div class="form-group">
+                <label>Phone Number <span class="req">*</span></label>
+                <div class="input-box">
+                  <i class="fas fa-phone"></i>
+                  <input type="tel" id="phone" name="phone" placeholder="+234 800 000 0000" required>
+                </div>
+              </div>
+              <div class="form-group">
+                <label>State of Origin</label>
+                <div class="input-box">
+                  <i class="fas fa-map"></i>
+                  <select id="state" name="state">
+                    <option value="" disabled selected>Select your state</option>
+                    <option>Abia</option>
+                    <option>Adamawa</option>
+                    <option>Akwa Ibom</option>
+                    <option>Anambra</option>
+                    <option>Bauchi</option>
+                    <option>Bayelsa</option>
+                    <option>Benue</option>
+                    <option>Borno</option>
+                    <option>Cross River</option>
+                    <option>Delta</option>
+                    <option>Ebonyi</option>
+                    <option>Edo</option>
+                    <option>Ekiti</option>
+                    <option>Enugu</option>
+                    <option>FCT — Abuja</option>
+                    <option>Gombe</option>
+                    <option>Imo</option>
+                    <option>Jigawa</option>
+                    <option>Kaduna</option>
+                    <option>Kano</option>
+                    <option>Katsina</option>
+                    <option>Kebbi</option>
+                    <option>Kogi</option>
+                    <option>Kwara</option>
+                    <option>Lagos</option>
+                    <option>Nasarawa</option>
+                    <option>Niger</option>
+                    <option>Ogun</option>
+                    <option>Ondo</option>
+                    <option>Osun</option>
+                    <option>Oyo</option>
+                    <option>Plateau</option>
+                    <option>Rivers</option>
+                    <option>Sokoto</option>
+                    <option>Taraba</option>
+                    <option>Yobe</option>
+                    <option>Zamfara</option>
+                  </select>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Step 3: Room Selection -->
+          <div class="form-section">
+            <div class="form-section-title">
+              <span class="step-num">3</span>
+              <h3>Room Selection</h3>
+            </div>
+            <div class="form-group">
+              <label>Room Type <span class="req">*</span></label>
+              <div class="input-box">
+                <i class="fas fa-bed"></i>
+                <select id="roomType" name="roomType" required>
+                  <option value="">Select a room type</option>
+                  <option value="Classic">Classic Room &#8212; &#8358;18,000 / night</option>
+                  <option value="Deluxe">Deluxe Room &#8212; &#8358;25,000 / night</option>
+                  <option value="Junior">Junior Suite &#8212; &#8358;45,000 / night</option>
+                  <option value="Executive">Executive Suite &#8212; &#8358;75,000 / night</option>
+                  <option value="Presidential">Presidential Suite &#8212; &#8358;90,000 / night</option>
+                </select>
+              </div>
+            </div>
+
+            <!-- Room Preview -->
+            <div class="room-preview" id="roomPreview">
+              <img id="previewImg" src="" alt="Room preview">
+              <div class="room-preview-info">
+                <h4 id="previewName">Room Name</h4>
+                <span class="preview-price" id="previewPrice">Price</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Step 4: Special Requests -->
+          <div class="form-section">
+            <div class="form-section-title">
+              <span class="step-num">4</span>
+              <h3>Special Requests <span style="font-size:0.75rem;color:var(--muted);font-family:var(--sans);font-weight:400;">(Optional)</span></h3>
+            </div>
+            <div class="form-group">
+              <div class="input-box" style="align-items:flex-start;padding-top:12px;">
+                <i class="fas fa-comment-dots" style="margin-top:3px;"></i>
+                <textarea id="specialRequests" name="specialRequests"
+                  placeholder="Early check-in, dietary needs, accessibility requirements, celebration setup, etc."
+                  rows="4"></textarea>
+              </div>
+            </div>
+          </div>
+
+          <!-- Price Summary (shows when dates + room are selected) -->
+          <div class="price-summary" id="priceSummary">
+            <div class="price-summary-title">
+              <i class="fas fa-receipt"></i> Booking Summary
+            </div>
+            <div class="price-row">
+              <span>Room Type</span>
+              <span id="sumRoomType">&#8212;</span>
+            </div>
+            <div class="price-row">
+              <span>Rate per Night</span>
+              <span id="sumNightRate">&#8212;</span>
+            </div>
+            <div class="price-row">
+              <span>Number of Rooms</span>
+              <span id="sumRooms">&#8212;</span>
+            </div>
+            <div class="price-row">
+              <span>Duration</span>
+              <span id="sumNights">&#8212;</span>
+            </div>
+            <div class="price-row total-row">
+              <span>Estimated Total</span>
+              <span id="sumTotal">&#8212;</span>
+            </div>
+          </div>
+
+          <!-- Submit -->
+          <div class="booking-submit-wrap">
+            <button type="submit" class="btn btn-whatsapp">
+              <i class="fab fa-whatsapp"></i>
+              Confirm Booking via WhatsApp
+            </button>
+            <div class="security-note">
+              <i class="fas fa-shield-alt"></i>
+              Your information is secure and will only be used to process your booking.
+            </div>
+          </div>
+
+        </form>
+
+        <!-- Sidebar -->
+        <aside class="booking-sidebar">
+
+          <!-- Room Quick Select -->
+          <div class="sidebar-card" data-aos="fade-left" data-aos-delay="100">
+            <h4>Select a Room</h4>
+
+            <div class="room-option" data-room="Classic">
+              <img src="image/WhatsApp Image 2026-02-14 at 6.42.02 AM.jpeg" alt="Classic Room">
+              <div class="room-opt-info">
+                <strong>Classic Room</strong>
+                <span>&#8358;18,000 / night</span>
+              </div>
+            </div>
+
+            <div class="room-option" data-room="Deluxe">
+              <img src="image/DELUX ROOM.jpeg" alt="Deluxe Room">
+              <div class="room-opt-info">
+                <strong>Deluxe Room</strong>
+                <span>&#8358;25,000 / night</span>
+              </div>
+            </div>
+
+            <div class="room-option" data-room="Junior">
+              <img src="image/JUNIOR SUITE.jpeg" alt="Junior Suite">
+              <div class="room-opt-info">
+                <strong>Junior Suite</strong>
+                <span>&#8358;45,000 / night</span>
+              </div>
+            </div>
+
+            <div class="room-option" data-room="Executive">
+              <img src="image/executive room.jpeg" alt="Executive Suite">
+              <div class="room-opt-info">
+                <strong>Executive Suite</strong>
+                <span>&#8358;75,000 / night</span>
+              </div>
+            </div>
+
+            <div class="room-option" data-room="Presidential">
+              <img src="image/master room.jpeg" alt="Presidential Suite">
+              <div class="room-opt-info">
+                <strong>Presidential Suite</strong>
+                <span>&#8358;90,000 / night</span>
+              </div>
+            </div>
+
+          </div>
+
+          <!-- Booking Notes -->
+          <div class="sidebar-card" data-aos="fade-left" data-aos-delay="200">
+            <h4>Booking Information</h4>
+            <div class="sidebar-note">
+              <i class="fas fa-check-circle"></i>
+              <span>Free cancellation up to 24 hours before check-in</span>
+            </div>
+            <div class="sidebar-note">
+              <i class="fas fa-check-circle"></i>
+              <span>Complimentary breakfast included with all rooms</span>
+            </div>
+            <div class="sidebar-note">
+              <i class="fas fa-check-circle"></i>
+              <span>Free secure parking available on site</span>
+            </div>
+            <div class="sidebar-note">
+              <i class="fas fa-check-circle"></i>
+              <span>Bookings confirmed directly via WhatsApp</span>
+            </div>
+            <div class="sidebar-note">
+              <i class="fas fa-check-circle"></i>
+              <span>Check-in: 12:00 PM &nbsp;&#183;&nbsp; Check-out: 11:00 AM</span>
+            </div>
+          </div>
+
+          <!-- Contact Card -->
+          <div class="sidebar-card" data-aos="fade-left" data-aos-delay="300">
+            <h4>Need Help?</h4>
+            <div class="sidebar-note">
+              <i class="fas fa-phone"></i>
+              <span>+234 806 211 5796</span>
+            </div>
+            <div class="sidebar-note">
+              <i class="fas fa-envelope"></i>
+              <span>info@ninahotels.com.ng</span>
+            </div>
+            <div class="sidebar-note">
+              <i class="fas fa-map-marker-alt"></i>
+              <span>Plot 3, Romanus Nzekwe Street, Kubwa, Abuja</span>
+            </div>
+          </div>
+
+        </aside>
+      </div>
+    </div>
+  </div>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="footer-bottom" style="border-top:1px solid rgba(255,255,255,0.06);">
+      <div class="container">
+        <p>&#169; 2026 Nina Hotels Ltd. All rights reserved. | <a href="index.html" style="color:var(--gold);">Back to Home</a></p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script src="assets/js/main.js"></script>
+  <script src="assets/js/booking.js"></script>
+</body>
+</html>

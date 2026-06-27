@@ -1,0 +1,534 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Nina Hotels | Luxury & Comfort in Abuja</title>
+  <meta name="description" content="Nina Hotels — Premier luxury accommodation in Kubwa, Abuja. World-class rooms, sports facilities, fine dining, spa and more.">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+  <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+
+  <!-- Navigation -->
+  <nav class="navbar" id="navbar">
+    <div class="nav-container">
+      <a href="index.html" class="logo">
+        <img src="image/logo2.png" alt="Nina Hotels Logo">
+        <span>Nina Hotels</span>
+      </a>
+      <ul class="nav-links" id="navLinks">
+        <li><a href="index.html" class="active">Home</a></li>
+        <li><a href="facility.html">Facilities</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="contact.html">Contact</a></li>
+        <li><a href="booking.html" class="nav-book-btn">Book Now</a></li>
+      </ul>
+      <button class="hamburger" id="hamburger" aria-label="Toggle menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </nav>
+
+  <!-- Hero Section with Carousel -->
+  <section class="hero" id="hero">
+    <div class="hero-slider">
+      <div class="slide active" style="background-image:url('image/INDEX IMAGE.jpeg')"></div>
+      <div class="slide" style="background-image:url('image/index image 2.jpeg')"></div>
+      <div class="slide" style="background-image:url('image/index image 3.jpeg')"></div>
+      <div class="slide" style="background-image:url('image/hotel view.jpeg')"></div>
+      <div class="slide" style="background-image:url('image/DELUX ROOM.jpeg')"></div>
+      <div class="slide" style="background-image:url('image/executive room.jpeg')"></div>
+    </div>
+    <div class="hero-overlay"></div>
+
+    <div class="hero-content">
+      <p class="hero-subtitle" data-aos="fade-down" data-aos-delay="200">Welcome to</p>
+      <h1 class="hero-title" data-aos="fade-up" data-aos-delay="400">Nina Hotels</h1>
+      <p class="hero-tagline" data-aos="fade-up" data-aos-delay="600">Pure Luxury &amp; Comfort in the Heart of Abuja</p>
+      <div class="hero-cta" data-aos="fade-up" data-aos-delay="800">
+        <a href="booking.html" class="btn btn-gold">
+          <i class="fas fa-bed"></i> Book Your Stay
+        </a>
+        <a href="facility.html" class="btn btn-outline">
+          <i class="fas fa-th-large"></i> Explore Facilities
+        </a>
+      </div>
+    </div>
+
+    <button class="slider-btn slider-prev" aria-label="Previous slide"><i class="fas fa-chevron-left"></i></button>
+    <button class="slider-btn slider-next" aria-label="Next slide"><i class="fas fa-chevron-right"></i></button>
+    <div class="slider-dots" role="tablist" aria-label="Slide navigation"></div>
+    <div class="scroll-indicator"><div class="scroll-line"></div></div>
+  </section>
+
+  <!-- Quick Booking Bar -->
+  <section class="quick-book">
+    <div class="quick-book-inner">
+      <div class="quick-field">
+        <i class="fas fa-calendar-check"></i>
+        <div>
+          <label>Check In</label>
+          <input type="date" id="qCheckIn">
+        </div>
+      </div>
+      <div class="divider"></div>
+      <div class="quick-field">
+        <i class="fas fa-calendar-times"></i>
+        <div>
+          <label>Check Out</label>
+          <input type="date" id="qCheckOut">
+        </div>
+      </div>
+      <div class="divider"></div>
+      <div class="quick-field">
+        <i class="fas fa-user-friends"></i>
+        <div>
+          <label>Guests</label>
+          <select id="qGuests">
+            <option>1 Adult</option>
+            <option selected>2 Adults</option>
+            <option>3 Adults</option>
+            <option>4 Adults</option>
+            <option>5+ Adults</option>
+          </select>
+        </div>
+      </div>
+      <div class="divider"></div>
+      <div class="quick-field">
+        <i class="fas fa-bed"></i>
+        <div>
+          <label>Room Type</label>
+          <select id="qRoom">
+            <option value="">Any Room</option>
+            <option value="Deluxe">Deluxe Room</option>
+            <option value="Junior">Junior Suite</option>
+            <option value="Executive">Executive Suite</option>
+          </select>
+        </div>
+      </div>
+      <a href="booking.html" class="btn btn-gold quick-search-btn" id="quickSearchBtn">
+        Check Availability
+      </a>
+    </div>
+  </section>
+
+  <!-- Intro Section -->
+  <section class="intro section-pad">
+    <div class="container">
+      <div class="intro-grid">
+        <div class="intro-images" data-aos="fade-right" data-aos-duration="1000">
+          <div class="img-stack">
+            <img src="image/hotel view.jpeg" alt="Nina Hotels exterior" class="img-main">
+            <img src="image/lounge.jpeg" alt="Nina Hotels lounge" class="img-float">
+            <div class="img-badge">
+              <span class="badge-num">500+</span>
+              <span class="badge-text">Happy Guests</span>
+            </div>
+          </div>
+        </div>
+        <div class="intro-text" data-aos="fade-left" data-aos-duration="1000">
+          <p class="section-subtitle">Our Story</p>
+          <h2 class="section-title">A Sanctuary of<br><em>Luxury &amp; Comfort</em></h2>
+          <p class="intro-desc">
+            Located at Plot 3 Romanus Nzekwe Street, Kubwa, Abuja, Nina Hotels is a premier
+            destination for both business and leisure travelers. We combine world-class
+            accommodations with exceptional recreational facilities and warm Nigerian hospitality.
+          </p>
+          <div class="intro-stats">
+            <div class="stat">
+              <span class="stat-num">3</span>
+              <span class="stat-label">Room Types</span>
+            </div>
+            <div class="stat">
+              <span class="stat-num">4.8★</span>
+              <span class="stat-label">Guest Rating</span>
+            </div>
+            <div class="stat">
+              <span class="stat-num">10+</span>
+              <span class="stat-label">Facilities</span>
+            </div>
+          </div>
+          <a href="about.html" class="btn btn-gold">Discover More</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Rooms Section -->
+  <section class="rooms section-pad" id="rooms">
+    <div class="container">
+      <div class="section-header center" data-aos="fade-up">
+        <p class="section-subtitle">Accommodations</p>
+        <h2 class="section-title">Our Exclusive<br><em>Rooms &amp; Suites</em></h2>
+      </div>
+
+      <div class="rooms-grid" style="grid-template-columns:repeat(3,1fr);">
+
+        <div class="room-card" data-aos="fade-up" data-aos-delay="50">
+          <div class="room-img">
+            <img src="image/WhatsApp Image 2026-02-14 at 6.42.02 AM.jpeg" alt="Classic Room">
+            <div class="room-tag" style="background:#888;">Classic</div>
+          </div>
+          <div class="room-body">
+            <div class="room-info">
+              <h3>Classic Room</h3>
+              <p>Comfortable, well-furnished room with all the essentials. Great choice for budget-conscious travelers.</p>
+            </div>
+            <div class="room-features">
+              <span><i class="fas fa-wifi"></i> Free Wi-Fi</span>
+              <span><i class="fas fa-snowflake"></i> AC</span>
+              <span><i class="fas fa-tv"></i> TV</span>
+              <span><i class="fas fa-coffee"></i> Breakfast</span>
+            </div>
+            <div class="room-footer">
+              <div class="room-price">
+                <span class="price">&#8358;18,000</span>
+                <span class="per">/night</span>
+              </div>
+              <a href="booking.html?room=Classic" class="btn btn-gold btn-sm">Book Now</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="room-card" data-aos="fade-up" data-aos-delay="100">
+          <div class="room-img">
+            <img src="image/DELUX ROOM.jpeg" alt="Deluxe Room">
+            <div class="room-tag">Most Popular</div>
+          </div>
+          <div class="room-body">
+            <div class="room-info">
+              <h3>Deluxe Room</h3>
+              <p>Spacious, air-conditioned room with flat-screen TV, free Wi-Fi and premium bedding. Perfect for couples.</p>
+            </div>
+            <div class="room-features">
+              <span><i class="fas fa-wifi"></i> Free Wi-Fi</span>
+              <span><i class="fas fa-snowflake"></i> AC</span>
+              <span><i class="fas fa-tv"></i> Smart TV</span>
+              <span><i class="fas fa-coffee"></i> Breakfast</span>
+            </div>
+            <div class="room-footer">
+              <div class="room-price">
+                <span class="price">&#8358;25,000</span>
+                <span class="per">/night</span>
+              </div>
+              <a href="booking.html?room=Deluxe" class="btn btn-gold btn-sm">Book Now</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="room-card featured" data-aos="fade-up" data-aos-delay="150">
+          <div class="room-img">
+            <img src="image/JUNIOR SUITE.jpeg" alt="Junior Suite">
+            <div class="room-tag featured-tag">Best Value</div>
+          </div>
+          <div class="room-body">
+            <div class="room-info">
+              <h3>Junior Suite</h3>
+              <p>Elegant suite with a separate living area, premium bedding and views. Ideal for families and extended stays.</p>
+            </div>
+            <div class="room-features">
+              <span><i class="fas fa-wifi"></i> Free Wi-Fi</span>
+              <span><i class="fas fa-snowflake"></i> AC</span>
+              <span><i class="fas fa-tv"></i> Smart TV</span>
+              <span><i class="fas fa-utensils"></i> Room Service</span>
+            </div>
+            <div class="room-footer">
+              <div class="room-price">
+                <span class="price">&#8358;45,000</span>
+                <span class="per">/night</span>
+              </div>
+              <a href="booking.html?room=Junior" class="btn btn-gold btn-sm">Book Now</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="room-card" data-aos="fade-up" data-aos-delay="200">
+          <div class="room-img">
+            <img src="image/executive room.jpeg" alt="Executive Suite">
+            <div class="room-tag luxury-tag">Luxury</div>
+          </div>
+          <div class="room-body">
+            <div class="room-info">
+              <h3>Executive Suite</h3>
+              <p>Master bedroom with full living suite, premium amenities and VIP concierge service for discerning guests.</p>
+            </div>
+            <div class="room-features">
+              <span><i class="fas fa-wifi"></i> Free Wi-Fi</span>
+              <span><i class="fas fa-snowflake"></i> AC</span>
+              <span><i class="fas fa-concierge-bell"></i> Butler</span>
+              <span><i class="fas fa-glass-cheers"></i> Mini Bar</span>
+            </div>
+            <div class="room-footer">
+              <div class="room-price">
+                <span class="price">&#8358;75,000</span>
+                <span class="per">/night</span>
+              </div>
+              <a href="booking.html?room=Executive" class="btn btn-gold btn-sm">Book Now</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="room-card" data-aos="fade-up" data-aos-delay="250" style="border-color:rgba(201,168,76,0.5);box-shadow:0 0 40px rgba(201,168,76,0.12);">
+          <div class="room-img">
+            <img src="image/master room.jpeg" alt="Presidential Suite">
+            <div class="room-tag luxury-tag">Presidential</div>
+          </div>
+          <div class="room-body">
+            <div class="room-info">
+              <h3>Presidential Suite</h3>
+              <p>The pinnacle of luxury at Nina Hotels. Expansive suite with premium furnishings, exclusive lounge and full butler service.</p>
+            </div>
+            <div class="room-features">
+              <span><i class="fas fa-wifi"></i> Free Wi-Fi</span>
+              <span><i class="fas fa-concierge-bell"></i> Butler</span>
+              <span><i class="fas fa-glass-cheers"></i> Mini Bar</span>
+              <span><i class="fas fa-crown"></i> VIP Access</span>
+            </div>
+            <div class="room-footer">
+              <div class="room-price">
+                <span class="price">&#8358;90,000</span>
+                <span class="per">/night</span>
+              </div>
+              <a href="booking.html?room=Presidential" class="btn btn-gold btn-sm">Book Now</a>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- Services Section -->
+  <section class="services section-pad" id="services">
+    <div class="container">
+      <div class="section-header center" data-aos="fade-up">
+        <p class="section-subtitle">What We Offer</p>
+        <h2 class="section-title">World-Class<br><em>Services &amp; Facilities</em></h2>
+      </div>
+      <div class="services-grid">
+        <div class="service-card" data-aos="zoom-in" data-aos-delay="50">
+          <div class="service-icon"><i class="fas fa-swimming-pool"></i></div>
+          <h3>Outdoor Pool</h3>
+          <p>Relax and unwind in our stunning outdoor swimming pool surrounded by lush tropical gardens.</p>
+        </div>
+        <div class="service-card" data-aos="zoom-in" data-aos-delay="100">
+          <div class="service-icon"><i class="fas fa-dumbbell"></i></div>
+          <h3>Sports Arena</h3>
+          <p>Football pitch, basketball, lawn tennis, table tennis, badminton and volleyball courts on site.</p>
+        </div>
+        <div class="service-card" data-aos="zoom-in" data-aos-delay="150">
+          <div class="service-icon"><i class="fas fa-spa"></i></div>
+          <h3>Luxury Spa</h3>
+          <p>Rejuvenate your body and mind with our premium spa treatments and wellness services.</p>
+        </div>
+        <div class="service-card" data-aos="zoom-in" data-aos-delay="200">
+          <div class="service-icon"><i class="fas fa-utensils"></i></div>
+          <h3>Fine Dining</h3>
+          <p>Savor local and international cuisine crafted by our professional culinary team.</p>
+        </div>
+        <div class="service-card" data-aos="zoom-in" data-aos-delay="250">
+          <div class="service-icon"><i class="fas fa-glass-martini-alt"></i></div>
+          <h3>Executive Bar</h3>
+          <p>Premium cocktails, fine wines, and spirits served in our elegant lounge atmosphere.</p>
+        </div>
+        <div class="service-card" data-aos="zoom-in" data-aos-delay="300">
+          <div class="service-icon"><i class="fas fa-calendar-alt"></i></div>
+          <h3>Event Hall</h3>
+          <p>Versatile spaces for weddings, conferences, corporate events and private celebrations.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Gallery Section -->
+  <section class="gallery section-pad">
+    <div class="container">
+      <div class="section-header center" data-aos="fade-up">
+        <p class="section-subtitle">Visual Tour</p>
+        <h2 class="section-title">Experience<br><em>Nina Hotels</em></h2>
+      </div>
+      <div class="gallery-grid">
+        <div class="gallery-item tall" data-aos="zoom-in">
+          <img src="image/hotel view.jpeg" alt="Hotel View">
+          <div class="gallery-overlay"><i class="fas fa-expand-alt"></i></div>
+        </div>
+        <div class="gallery-item" data-aos="zoom-in" data-aos-delay="100">
+          <img src="image/Dining.jpeg" alt="Dining">
+          <div class="gallery-overlay"><i class="fas fa-expand-alt"></i></div>
+        </div>
+        <div class="gallery-item" data-aos="zoom-in" data-aos-delay="150">
+          <img src="image/spa image.jpeg" alt="Spa">
+          <div class="gallery-overlay"><i class="fas fa-expand-alt"></i></div>
+        </div>
+        <div class="gallery-item wide" data-aos="zoom-in" data-aos-delay="200">
+          <img src="image/sport arena.jpeg" alt="Sports Arena">
+          <div class="gallery-overlay"><i class="fas fa-expand-alt"></i></div>
+        </div>
+        <div class="gallery-item" data-aos="zoom-in" data-aos-delay="250">
+          <img src="image/lounge.jpeg" alt="Lounge">
+          <div class="gallery-overlay"><i class="fas fa-expand-alt"></i></div>
+        </div>
+        <div class="gallery-item" data-aos="zoom-in" data-aos-delay="300">
+          <img src="image/executive bar.jpeg" alt="Executive Bar">
+          <div class="gallery-overlay"><i class="fas fa-expand-alt"></i></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA Section -->
+  <section class="cta-section">
+    <div class="cta-bg" style="background-image:url('image/WhatsApp Image 2026-02-14 at 6.42.02 AM.jpeg')"></div>
+    <div class="cta-overlay"></div>
+    <div class="container">
+      <div class="cta-content" data-aos="fade-up">
+        <p class="section-subtitle">Limited Availability</p>
+        <h2>Book Your Perfect Stay<br><em>Today</em></h2>
+        <p>Experience unmatched hospitality at Nina Hotels. Reserve your room and enjoy exclusive benefits.</p>
+        <a href="booking.html" class="btn btn-gold btn-lg">
+          Reserve Now &nbsp;<i class="fas fa-arrow-right"></i>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Testimonials -->
+  <section class="testimonials section-pad">
+    <div class="container">
+      <div class="section-header center" data-aos="fade-up">
+        <p class="section-subtitle">Guest Reviews</p>
+        <h2 class="section-title">What Our Guests<br><em>Say About Us</em></h2>
+      </div>
+      <div class="testimonials-grid">
+        <div class="testimonial-card" data-aos="fade-up" data-aos-delay="100">
+          <div class="stars">★★★★★</div>
+          <p>"Nina hotels kubwa Abuja is where matured minds relax, meet and relate with honour. Highly secured and protected — perfect for families."</p>
+          <div class="reviewer">
+            <div class="reviewer-avatar">K</div>
+            <div>
+              <strong>Kanayo N.</strong>
+              <span>Verified Guest · TripAdvisor</span>
+            </div>
+          </div>
+        </div>
+        <div class="testimonial-card" data-aos="fade-up" data-aos-delay="200">
+          <div class="stars">★★★★★</div>
+          <p>"One of the best hotels in Abuja offering exceptional user experience — volleyball courts, fitness centre, outdoor pool, tennis courts."</p>
+          <div class="reviewer">
+            <div class="reviewer-avatar">A</div>
+            <div>
+              <strong>Adaeze O.</strong>
+              <span>Verified Guest · MapQuest</span>
+            </div>
+          </div>
+        </div>
+        <div class="testimonial-card" data-aos="fade-up" data-aos-delay="300">
+          <div class="stars">★★★★☆</div>
+          <p>"Great value. The meals are delicious, pricing is fair for long-term stays, and the security is robust. Highly recommend for business travel."</p>
+          <div class="reviewer">
+            <div class="reviewer-avatar">E</div>
+            <div>
+              <strong>Emmanuel T.</strong>
+              <span>Verified Guest · Google</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="footer-top">
+      <div class="container">
+        <div class="footer-grid">
+          <div class="footer-col about-col">
+            <div class="footer-logo">
+              <img src="image/logo2.png" alt="Nina Hotels">
+              <h3>Nina Hotels</h3>
+            </div>
+            <p>Experience luxury and comfort with world-class rooms, facilities, spa, and event services designed for your perfect stay in Abuja.</p>
+            <div class="social-links">
+              <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+              <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+              <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+              <a href="#" aria-label="WhatsApp"><i class="fab fa-whatsapp"></i></a>
+            </div>
+          </div>
+          <div class="footer-col">
+            <h4>Quick Links</h4>
+            <ul>
+              <li><a href="index.html"><i class="fas fa-chevron-right"></i> Home</a></li>
+              <li><a href="facility.html"><i class="fas fa-chevron-right"></i> Facilities</a></li>
+              <li><a href="about.html"><i class="fas fa-chevron-right"></i> About Us</a></li>
+              <li><a href="contact.html"><i class="fas fa-chevron-right"></i> Contact</a></li>
+              <li><a href="booking.html"><i class="fas fa-chevron-right"></i> Book Now</a></li>
+            </ul>
+          </div>
+          <div class="footer-col">
+            <h4>Our Services</h4>
+            <ul>
+              <li><a href="booking.html"><i class="fas fa-chevron-right"></i> Luxury Rooms</a></li>
+              <li><a href="facility.html"><i class="fas fa-chevron-right"></i> Restaurant &amp; Bar</a></li>
+              <li><a href="facility.html"><i class="fas fa-chevron-right"></i> Spa &amp; Wellness</a></li>
+              <li><a href="facility.html"><i class="fas fa-chevron-right"></i> Sports Facilities</a></li>
+              <li><a href="facility.html"><i class="fas fa-chevron-right"></i> Event Hall</a></li>
+            </ul>
+          </div>
+          <div class="footer-col">
+            <h4>Contact Us</h4>
+            <div class="contact-items">
+              <div class="contact-item">
+                <i class="fas fa-map-marker-alt"></i>
+                <p>Plot 3, Romanus Nzekwe Street, Kubwa, Abuja FCT</p>
+              </div>
+              <div class="contact-item">
+                <i class="fas fa-phone"></i>
+                <p>+234 810 000 0000</p>
+              </div>
+              <div class="contact-item">
+                <i class="fas fa-envelope"></i>
+                <p>info@ninahotels.com.ng</p>
+              </div>
+            </div>
+            <h5>Newsletter</h5>
+            <form class="newsletter-form">
+              <input type="email" placeholder="Your email address">
+              <button type="submit" aria-label="Subscribe"><i class="fas fa-paper-plane"></i></button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="footer-map">
+      <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3938.893021588466!2d7.335376975020496!3d9.164122490902718!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x104dd926664625cb%3A0x9a0d3d9957efd4ff!2sNina%20Hotels!5e0!3m2!1sen!2sng!4v1771160817520!5m2!1sen!2sng"
+        width="100%" height="280" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade" title="Nina Hotels Location"></iframe>
+    </div>
+    <div class="footer-bottom">
+      <div class="container">
+        <p>© 2026 Nina Hotels Ltd. All rights reserved. | Plot 3, Romanus Nzekwe Street, Kubwa, Abuja</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Lightbox -->
+  <div class="lightbox" id="lightbox" role="dialog" aria-modal="true">
+    <span class="lightbox-close" id="lightboxClose" aria-label="Close">&times;</span>
+    <img id="lightboxImg" src="" alt="Gallery image">
+  </div>
+
+  <!-- Scroll to Top -->
+  <button class="scroll-top" id="scrollTop" aria-label="Scroll to top">
+    <i class="fas fa-chevron-up"></i>
+  </button>
+
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script src="assets/js/main.js"></script>
+</body>
+</html>

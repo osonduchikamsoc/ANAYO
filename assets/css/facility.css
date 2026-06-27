@@ -1,0 +1,170 @@
+/* ===================================================
+   NINA HOTELS — FACILITY PAGE STYLES
+   =================================================== */
+
+.facility-page { padding-top: 90px; }
+
+/* ── Page Header ── */
+.facility-page .page-hero {
+  position: relative;
+  height: 420px;
+  background: url("../../image/sport arena.jpeg") center/cover no-repeat;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+.page-hero-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(180deg, rgba(12,11,11,0.5) 0%, rgba(12,11,11,0.8) 100%);
+}
+.page-hero-content {
+  position: relative;
+  z-index: 2;
+}
+.page-hero-content h1 { font-size: clamp(2rem, 5vw, 3.5rem); margin-bottom: 10px; }
+.page-hero-content p { color: rgba(255,255,255,0.65); font-size: 1rem; }
+
+/* Breadcrumb */
+.breadcrumb {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 0.75rem;
+  color: rgba(255,255,255,0.4);
+  margin-bottom: 14px;
+  justify-content: center;
+}
+.breadcrumb a { color: var(--gold); transition: var(--transition); }
+.breadcrumb a:hover { color: var(--gold-light); }
+.breadcrumb i { font-size: 0.6rem; }
+
+/* ── Main Facilities ── */
+.main-facilities { background: var(--dark-2); padding: 90px 0; }
+.main-facilities .section-title { margin-bottom: 56px; }
+.facility-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+}
+.facility-card {
+  background: var(--dark-3);
+  border: 1px solid rgba(255,255,255,0.06);
+  border-radius: var(--radius);
+  overflow: hidden;
+  transition: var(--transition);
+}
+.facility-card:hover { transform: translateY(-8px); box-shadow: var(--shadow); border-color: rgba(201,168,76,0.2); }
+.facility-card-img {
+  height: 220px;
+  overflow: hidden;
+}
+.facility-card-img img {
+  width: 100%; height: 100%;
+  object-fit: cover;
+  transition: transform 0.6s ease;
+}
+.facility-card:hover .facility-card-img img { transform: scale(1.07); }
+.facility-card-body { padding: 26px; }
+.facility-card-body h3 { margin-bottom: 10px; }
+.facility-card-body p { font-size: 0.85rem; color: rgba(255,255,255,0.55); line-height: 1.7; margin-bottom: 20px; }
+.facility-icon-row { display: flex; align-items: center; gap: 10px; margin-bottom: 20px; }
+.fac-icon {
+  width: 34px; height: 34px;
+  border-radius: 50%;
+  background: rgba(201,168,76,0.1);
+  border: 1px solid rgba(201,168,76,0.2);
+  display: flex; align-items: center; justify-content: center;
+  color: var(--gold); font-size: 0.82rem;
+}
+
+/* ── Filter Bar ── */
+.filter-section { background: var(--dark); padding: 50px 0 40px; }
+.filter-section h2 { margin-bottom: 30px; font-size: 1.5rem; }
+.filter-bar {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-bottom: 0;
+}
+.filter-btn {
+  padding: 9px 20px;
+  border: 1px solid rgba(255,255,255,0.1);
+  border-radius: 4px;
+  font-size: 0.72rem;
+  font-weight: 600;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  color: rgba(255,255,255,0.55);
+  background: rgba(255,255,255,0.03);
+  transition: var(--transition);
+  cursor: pointer;
+}
+.filter-btn:hover { border-color: var(--gold); color: var(--gold); }
+.filter-btn.active { background: var(--gold); border-color: var(--gold); color: var(--dark); }
+
+/* ── Sports Cards Grid ── */
+.sports-section { background: var(--dark); padding: 0 0 90px; }
+.sports-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+}
+.sport-card {
+  background: var(--dark-3);
+  border: 1px solid rgba(255,255,255,0.06);
+  border-radius: var(--radius);
+  overflow: hidden;
+  transition: var(--transition);
+}
+.sport-card[data-category] { }
+.sport-card.hidden { display: none; }
+.sport-card:hover { transform: translateY(-5px); border-color: rgba(201,168,76,0.2); }
+.sport-card-img {
+  height: 180px;
+  overflow: hidden;
+}
+.sport-card-img img { width: 100%; height: 100%; object-fit: cover; transition: transform 0.5s ease; }
+.sport-card:hover .sport-card-img img { transform: scale(1.07); }
+.sport-card-body { padding: 18px; }
+.sport-card-body h4 { font-size: 0.9rem; margin-bottom: 6px; }
+.sport-card-body p { font-size: 0.78rem; color: rgba(255,255,255,0.5); line-height: 1.6; margin-bottom: 10px; }
+.rating { font-size: 0.78rem; color: var(--gold); font-weight: 600; }
+.rating-stars { font-size: 0.7rem; letter-spacing: 1px; }
+
+/* ── Description Section ── */
+.facility-desc { background: var(--dark-2); padding: 90px 0; }
+.facility-desc-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 64px; align-items: center; }
+.facility-desc-text h2 { margin-bottom: 22px; }
+.facility-desc-text p { font-size: 0.9rem; color: rgba(255,255,255,0.6); line-height: 1.85; margin-bottom: 16px; }
+.facility-desc-img { position: relative; }
+.facility-desc-img img {
+  width: 100%; height: 420px;
+  object-fit: cover;
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+}
+.facility-desc-img::before {
+  content: '';
+  position: absolute;
+  inset: -12px;
+  border: 1px solid rgba(201,168,76,0.2);
+  border-radius: calc(var(--radius) + 4px);
+  pointer-events: none;
+}
+
+/* ── Responsive ── */
+@media (max-width: 1024px) {
+  .facility-grid { grid-template-columns: repeat(2,1fr); }
+  .sports-grid { grid-template-columns: repeat(2,1fr); }
+}
+@media (max-width: 768px) {
+  .facility-grid { grid-template-columns: 1fr; }
+  .sports-grid { grid-template-columns: repeat(2,1fr); }
+  .facility-desc-grid { grid-template-columns: 1fr; }
+  .facility-desc-img img { height: 280px; }
+}
+@media (max-width: 480px) {
+  .sports-grid { grid-template-columns: 1fr; }
+}
