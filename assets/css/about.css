@@ -2,7 +2,7 @@
    NINA HOTELS — ABOUT PAGE STYLES
    =================================================== */
 
-.about-page { padding-top: 90px; }
+.about-page { padding-top: 90px; overflow: hidden;}
 
 /* ── Page Hero ── */
 .about-page .page-hero {

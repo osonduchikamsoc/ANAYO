@@ -4,6 +4,7 @@
 
 .contact-page {
   padding-top: 90px;
+  overflow: hidden;
 }
 
 /* ── Page Hero ── */
@@ -403,7 +404,7 @@
 
     .input-box {
     width: 100%;
-    margin: 0 auto;
+    margin:  auto;
   }
 
   .quick-row {
